@@ -1,11 +1,13 @@
 # coding: utf-8
-lib = File.expand_path("../lib", __FILE__)
+lib = File.expand_path("../pegortech/lib", __FILE__)
+puts lib
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+puts $LOAD_PATH
 require "vagrant-ignition/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "vagrant-ignition"
-  spec.version       = "0.0.3"
+  spec.name          = "pegortech-vagrant-ignition"
+  spec.version       = "0.0.1"
   spec.authors       = ["Alexander Pavel", "Alex Crawford"]
   spec.email         = ["alex.pavel@coreos.com", "alex.crawford@coreos.com"]
 
