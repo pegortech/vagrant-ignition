@@ -30,6 +30,9 @@ Options:
 
 `config.ignition.ip`: Set to desired ip of eth1 (only applies if a private network is being created)
 
+`config.ignition.contoller`: Set to the name of the disk controller that the configuration drive is to be attached to. "Defaults to IDE Controller")
+
+
 ## Contributing
 
 Bug reports are welcome at https://issues.coreos.com/.
