@@ -1,7 +1,7 @@
 require 'json'
 
 def ignition_template()
-  {ignition: {version: "2.0.0", config: {}}, storage: {}, networkd: {}, passwd: {}}
+  {ignition: {version: "3.0.0", config: {}}, storage: {}, networkd: {}, passwd: {}}
 end
 
 def hostname_entry(hostname)

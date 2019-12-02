@@ -1,15 +1,15 @@
 # Vagrant::Ignition
-A Vagrant plugin that generates and mounts gpt partitioned drive for Ignition to use. It is only designed to work with the Virtualbox provider for now.
+A Vagrant plugin that generates and mounts gpt partitioned drive for Ignition to use. It is only designed to work with the Virtualbox provider for now. The plugin is forked from vagrant-ignition and enhanced slightly to allow the disk that the plugin creates to be attached to a named contoller. The original version insisted in having a contoller called 'IDE Controller'. If your usual boot device is a SATA controller, then having inserting an IDE disk steals its boot priority and the virtual machine will not boot.\P\P Additionally, the plugin is not fully compatible some of the components that gets shipped with fedora-coreos. Most notable fedora-coreos uses a differnt network manager (NetworkManager as opposed to networkd. Consequently the plugin fails to generate the required network configuratoin. This could be rectified by getting Ignition to add the necessary configuratoin files to /etc/NetworkManager/system-connections."
 
 
 ## Installation
 Build the app using:
 
-    $ gem build vagrant-ignition.gemspec
+    $ gem build pegortech-vagrant-ignition.gemspec
 
 And install it with:
 
-    $ vagrant plugin install vagrant-ignition-0.0.3.gem
+    $ vagrant plugin install pegortech-vagrant-ignition-0.0.1.gem
 
 ## Usage
 To use this plugin, a couple of config options must be set in a project's Vagrantfile config section.
